@@ -19,3 +19,16 @@ This repository is divided to branches that correspond to the blog post sections
 * websockets - The code at the end of the Hello Websockets! section.
 * components-part2 - The code at the end of the Components-Phase 2 section.
 * websockets-part2 - The code at the end of the WebSockets-Phase 2 section.
+
+# ADVPROG Module 10
+
+## Nama: Makarim Zufar Prambduyo
+
+## NPM: 2306241751
+
+## Kelas: ADVPRO-B
+
+### Experiment 3.1: Original code
+
+![3.1 screenshots](/README_image/Screenshot%202025-05-22%20223743.png)
+Langkah pertama yang harus dilakukan adalah menjalankan SimpleWebSocketServer yang telah disediakan oleh jtordgeman. Setelah server websocket berjalan, langkah selanjutnya adalah mengeksekusi aplikasi di repositori YewChat. Dari hasil pengujian, terlihat bahwa fitur chat real-time sudah berfungsi dengan baik dan memungkinkan pengguna untuk berkomunikasi secara langsung melalui server yang telah dikonfigurasi.
