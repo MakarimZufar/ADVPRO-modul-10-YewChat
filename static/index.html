@@ -2,10 +2,75 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.tailwindcss.com"></script>
-        <title>Yewchat!</title>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'primary': '#6366f1',
+                            'primary-dark': '#4f46e5',
+                            'secondary': '#f59e0b',
+                            'accent': '#ec4899',
+                            'dark': '#1f2937',
+                            'light': '#f8fafc'
+                        },
+                        animation: {
+                            'float': 'float 6s ease-in-out infinite',
+                            'pulse-slow': 'pulse 3s ease-in-out infinite',
+                            'fade-in': 'fadeIn 0.5s ease-in',
+                            'slide-up': 'slideUp 0.3s ease-out'
+                        },
+                        keyframes: {
+                            float: {
+                                '0%, 100%': { transform: 'translateY(0px)' },
+                                '50%': { transform: 'translateY(-20px)' }
+                            },
+                            fadeIn: {
+                                '0%': { opacity: '0' },
+                                '100%': { opacity: '1' }
+                            },
+                            slideUp: {
+                                '0%': { transform: 'translateY(10px)', opacity: '0' },
+                                '100%': { transform: 'translateY(0)', opacity: '1' }
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Inter', sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            }
+            .glass-morphism {
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }
+            .chat-bubble-animation {
+                animation: slideUp 0.3s ease-out;
+            }
+            .typing-indicator {
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #9ca3af;
+                animation: pulse 1.4s infinite ease-in-out both;
+            }
+            .typing-indicator:nth-child(1) { animation-delay: -0.32s; }
+            .typing-indicator:nth-child(2) { animation-delay: -0.16s; }
+            .typing-indicator:nth-child(3) { animation-delay: 0s; }
+        </style>
+        <title>YewChat - Modern Messaging</title>
     </head>
-    <body>
-        <script src="yewchat.js"></script>
+    <body class="antialiased">
+        <div id="app-container" class="min-h-screen">
+            <script src="yewchat.js"></script>
+        </div>
     </body>
 </html>
